@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>GéoMétal
+    Oujbih</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="">
+            <span>
+              GéoMétal Oujbih
+            </span>
+          </a>
+        
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+              
+                
+              
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <div class="detail_box">
+              <h1>
+                GéoMétal <br> Oujbih
+              </h1>
+              <p>
+                GéoMétal Oujbih est une plateforme innovante dédiée aux calculs indispensables en géométallurgie et traitement des minerais. Elle vise à faciliter l’analyse et l’optimisation des processus miniers grâce à une suite d’outils interactifs, intuitifs et performants.
+                             </p>
+            <!-- Loader Section -->
+
+            </div>
+          </div>
+
+    </section>
+  
+    <!-- end slider section -->
+  </div>
+
+
+<!-- Service Section -->
+<section class="service_section layout_padding">
+  <div class="container">
+    <div class="heading_container">
+      <h2>Nos services</h2>
+      
+    </div>
+
+    <div class="service_container">
+      <!-- Calcul de Rendement -->
+      <div class="box">
+        <div class="img-box">
+          <img src="images/s1.jpg" class="img1" alt="Calcul de Rendement">
+        </div>
+        <div class="detail-box">
+          <h5>Calcul de Rendement</h5>
+          <p>Calculez le rendement en fonction du poids du minerai et des métaux extraits.</p>
+          <form id="rendement-form">
+            <label for="poids-minerai">Poids du minerai (kg):</label>
+            <input type="number" id="poids-minerai" name="poids-minerai" required min="0.1" step="0.1"><br>
+            <label for="metaux-extraits">Métaux extraits (kg):</label>
+            <input type="number" id="metaux-extraits" name="metaux-extraits" required min="0.1" step="0.1"><br>
+            <button type="submit" class="btn-calculer">Calculer le rendement</button>
+            <button type="button" class="btn-exemple" onclick="remplirExempleRendement()">Exemple</button>
+          </form>
+          <p id="rendement-result" class="resultat"></p>
+          <button id="telecharger-rendement" class="btn-telecharger" style="display:none;">Télécharger le résultat</button>
+        </div>
+      </div>
+
+      <!-- Vitesse Critique d'un Broyeur -->
+      <div class="box active">
+        <div class="img-box">
+          <img src="images/s2.jpg" class="img1" alt="Vitesse Critique">
+        </div>
+        <div class="detail-box">
+          <h5>Vitesse Critique d'un Broyeur</h5>
+          <p>Entrez les paramètres pour calculer la vitesse critique du broyeur.</p>
+          <form id="vitesse-critique-form">
+            <label for="diametre-bille">Diamètre des billes (m):</label>
+            <input type="number" step="0.01" id="diametre-bille" name="diametre-bille" required min="0.1"><br>
+            <label for="diametre-broyeur">Diamètre du broyeur (m):</label>
+            <input type="number" step="0.01" id="diametre-broyeur" name="diametre-broyeur" required min="0.1"><br>
+            <button type="submit" class="btn-calculer">Calculer la vitesse critique</button>
+            <button type="button" class="btn-exemple" onclick="remplirExempleVitesse()">Exemple</button>
+          </form>
+          <p id="vitesse-critique-result" class="resultat"></p>
+          <button id="telecharger-vitesse" class="btn-telecharger" style="display:none;">Télécharger le résultat</button>
+        </div>
+      </div>
+
+      <!-- Rapport de Réduction -->
+      <div class="box">
+        <div class="img-box">
+          <img src="images/s4.jpg" class="img1" alt="Rapport de Réduction">
+        </div>
+        <div class="detail-box">
+          <h5>Rapport de Réduction</h5>
+          <p>Calculez le rapport de réduction pour optimiser le broyage.</p>
+          <form id="rapport-reduction-form">
+            <label for="taille-entree">Taille de l'entrée (mm):</label>
+            <input type="number" id="taille-entree" name="taille-entree" required min="0.1"><br>
+            <label for="taille-sortie">Taille de la sortie (mm):</label>
+            <input type="number" id="taille-sortie" name="taille-sortie" required min="0.1"><br>
+            <button type="submit" class="btn-calculer">Calculer le rapport de réduction</button>
+            <button type="button" class="btn-exemple" onclick="remplirExempleRapport()">Exemple</button>
+          </form>
+          <p id="rapport-reduction-result" class="resultat"></p>
+          <button id="telecharger-rapport" class="btn-telecharger" style="display:none;">Télécharger le résultat</button>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="img-box">
+          <img src="images/s5.jpg" class="img1" alt="Critère de Taggart">
+        </div>
+        <div class="detail-box">
+          <h5>Critère de Taggart</h5>
+          <p>
+            Calculez le critère de Taggart pour évaluer la résistance au broyage des minerais.
+          </p>
+          <form id="taggart-form">
+            <label for="densite-mineral-lourd">Densité du minéral lourd (d1):</label>
+            <input type="number" id="densite-mineral-lourd" name="densite-mineral-lourd" required min="0.1"><br>
+            <label for="densite-mineral-leger">Densité du minéral léger (d2):</label>
+            <input type="number" id="densite-mineral-leger" name="densite-mineral-leger" required min="0.1"><br>
+            <label for="densite-fluide">Densité du fluide (p):</label>
+            <input type="number" id="densite-fluide" name="densite-fluide" required min="0.1"><br>
+            <button type="submit" class="btn-calculer">Calculer le critère de Taggart</button>
+            <button type="button" class="btn-exemple" onclick="remplirExempleTaggart()">Exemple</button>
+          </form>
+          <p id="taggart-result" class="resultat"></p>
+          <button id="telecharger-taggart" class="btn-telecharger" style="display:none;">Télécharger le résultat</button>
+        </div>
+      </div>
+</section>
+<!-- End Service Section -->
+<!-- JavaScript pour les calculs et interactions -->
+<script>
+  // Fonctions pour remplir les exemples
+  function remplirExempleRendement() {
+    document.getElementById('poids-minerai').value = 1000;
+    document.getElementById('metaux-extraits').value = 150;
+  }
+
+  function remplirExempleVitesse() {
+    document.getElementById('diametre-bille').value = 0.02; // Changed to integer
+    document.getElementById('diametre-broyeur').value = 10; // Changed to integer (scaled up by 100)
+  }
+
+  function remplirExempleRapport() {
+    document.getElementById('taille-entree').value = 50;
+    document.getElementById('taille-sortie').value = 5;
+  }
+
+  // Calcul de Rendement
+  document.getElementById('rendement-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var poidsMinerai = parseInt(document.getElementById('poids-minerai').value);
+    var metauxExtraits = parseInt(document.getElementById('metaux-extraits').value);
+
+    if (poidsMinerai > 0 && metauxExtraits > 0) {
+      var rendement = Math.round((metauxExtraits / poidsMinerai) * 100);
+      document.getElementById('rendement-result').innerText = "Rendement: " + rendement + "%";
+      document.getElementById('telecharger-rendement').style.display = 'block';
+    } else {
+      document.getElementById('rendement-result').innerText = "Veuillez saisir des valeurs valides (nombres positifs).";
+    }
+  });
+
+  // Télécharger le résultat du rendement
+  document.getElementById('telecharger-rendement').addEventListener('click', function() {
+    var resultat = document.getElementById('rendement-result').innerText;
+    var blob = new Blob([resultat], { type: 'text/plain' });
+    var lien = document.createElement('a');
+    lien.href = URL.createObjectURL(blob);
+    lien.download = 'resultat-rendement.txt';
+    lien.click();
+  });
+ // Calcul de la Vitesse Critique
+ document.getElementById('vitesse-critique-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var diametreBille = parseInt(document.getElementById('diametre-bille').value);
+    var diametreBroyeur = parseInt(document.getElementById('diametre-broyeur').value);
+
+    if (diametreBille > 0 && diametreBroyeur > 0) {
+      var vitesseCritique = Math.round(Math.sqrt((diametreBroyeur*10^-3 - diametreBille*10^-3) / (diametreBroyeur*10^-3));
+      document.getElementById('vitesse-critique-result').innerText = "Vitesse critique: " + vitesseCritique + " m/s";
+      document.getElementById('telecharger-vitesse').style.display = 'block';
+    } else {
+      document.getElementById('vitesse-critique-result').innerText = "Veuillez saisir des valeurs valides (nombres positifs).";
+    }
+  });
+  // Télécharger le résultat de la vitesse critique
+  document.getElementById('telecharger-vitesse').addEventListener('click', function() {
+    var resultat = document.getElementById('vitesse-critique-result').innerText;
+    var blob = new Blob([resultat], { type: 'text/plain' });
+    var lien = document.createElement('a');
+    lien.href = URL.createObjectURL(blob);
+    lien.download = 'resultat-vitesse-critique.txt';
+    lien.click();
+  });
+
+  // Calcul du Rapport de Réduction
+  document.getElementById('rapport-reduction-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var tailleEntree = parseInt(document.getElementById('taille-entree').value);
+    var tailleSortie = parseInt(document.getElementById('taille-sortie').value);
+
+    if (tailleEntree > 0 && tailleSortie > 0) {
+      var rapportReduction = Math.round(tailleEntree / tailleSortie);
+      document.getElementById('rapport-reduction-result').innerText = "Rapport de réduction: " + rapportReduction;
+      document.getElementById('telecharger-rapport').style.display = 'block';
+    } else {
+      document.getElementById('rapport-reduction-result').innerText = "Veuillez saisir des valeurs valides (nombres positifs).";
+    }
+  });
+
+  // Télécharger le résultat du rapport de réduction
+  document.getElementById('telecharger-rapport').addEventListener('click', function() {
+    var resultat = document.getElementById('rapport-reduction-result').innerText;
+    var blob = new Blob([resultat], { type: 'text/plain' });
+    var lien = document.createElement('a');
+    lien.href = URL.createObjectURL(blob);
+    lien.download = 'resultat-rapport-reduction.txt';
+    lien.click();
+  });
+</script>
+
+<!-- JavaScript pour les calculs -->
+<script>
+  // Calcul de Rendement
+  document.getElementById('rendement-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    var poidsMinerai = parseInt(document.getElementById('poids-minerai').value);
+    var metauxExtraits = parseInt(document.getElementById('metaux-extraits').value);
+    
+    if (!isNaN(poidsMinerai) && !isNaN(metauxExtraits)) {
+      var rendement = Math.round((metauxExtraits / poidsMinerai) * 100);
+      document.getElementById('rendement-result').innerText = "Rendement: " + rendement + "%";
+    } else {
+      document.getElementById('rendement-result').innerText = "Veuillez saisir des valeurs valides.";
+    }
+  });
+// Calcul de la Vitesse Critique
+document.getElementById('vitesse-critique-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    var diametreBille = parseFloat(document.getElementById('diametre-bille').value);
+    var diametreBroyeur = parseFloat(document.getElementById('diametre-broyeur').value);
+
+    if (!isNaN(diametreBille) && !isNaN(diametreBroyeur) && diametreBroyeur > 0) {
+        if (diametreBille < 0.1) {
+            diametreBille = 0.1; // Fixer un minimum de 0.1 pour le diamètre des billes
+        }
+        
+        var vitesseCritique = Math.round(Math.sqrt((diametreBroyeur - diametreBille) / diametreBroyeur));
+        document.getElementById('vitesse-critique-result').innerText = "Vitesse critique: " + vitesseCritique + " m/s";
+    } else {
+        document.getElementById('vitesse-critique-result').innerText = "Veuillez saisir des valeurs valides.";
+    }
+});
+
+// Calcul du Rapport de Réduction
+document.getElementById('rapport-reduction-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    var tailleEntree = parseFloat(document.getElementById('taille-entree').value);
+    var tailleSortie = parseFloat(document.getElementById('taille-sortie').value);
+
+    if (!isNaN(tailleEntree) && !isNaN(tailleSortie) && tailleSortie > 0) {
+        var rapportReduction = Math.round(tailleEntree / tailleSortie);
+        document.getElementById('rapport-reduction-result').innerText = "Rapport de réduction: " + rapportReduction;
+    } else {
+        document.getElementById('rapport-reduction-result').innerText = "Veuillez saisir des valeurs valides.";
+    }
+});
+
+  // Fonction pour remplir un exemple pour le Critère de Taggart
+  function remplirExempleTaggart() {
+    document.getElementById('densite-mineral-lourd').value = 5;
+    document.getElementById('densite-mineral-leger').value = 2;
+    document.getElementById('densite-fluide').value = 1;
+  }
+
+  // Fonction pour arrondir à la valeur valide la plus proche (4 ou 5)
+  function roundToNearestValidValue(value) {
+    const validValues = [4, 5];
+    let nearestValue = validValues[0];
+    let minDifference = Math.abs(value - nearestValue);
+
+    for (let i = 1; i < validValues.length; i++) {
+      const difference = Math.abs(value - validValues[i]);
+      if (difference < minDifference) {
+        minDifference = difference;
+        nearestValue = validValues[i];
+      }
+    }
+
+    return nearestValue;
+  }
+
+  // Calcul du Critère de Taggart
+  document.getElementById('taggart-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Récupérer les valeurs saisies
+    var d1 = parseInt(document.getElementById('densite-mineral-lourd').value);
+    var d2 = parseInt(document.getElementById('densite-mineral-leger').value);
+    var p = parseInt(document.getElementById('densite-fluide').value);
+
+    // Arrondir les valeurs à la valeur valide la plus proche
+    d1 = roundToNearestValidValue(d1);
+    d2 = roundToNearestValidValue(d2);
+    p = roundToNearestValidValue(p);
+
+    // Mettre à jour les champs avec les valeurs arrondies
+    document.getElementById('densite-mineral-lourd').value = d1;
+    document.getElementById('densite-mineral-leger').value = d2;
+    document.getElementById('densite-fluide').value = p;
+
+    // Vérifier que les valeurs sont valides
+    if (!isNaN(d1) && !isNaN(d2) && !isNaN(p)) {
+      var taggart = Math.round((d1 - p) / (d2 - p));
+      document.getElementById('taggart-result').innerText = "Critère de Taggart: " + taggart;
+      document.getElementById('telecharger-taggart').style.display = 'block';
+    } else {
+      document.getElementById('taggart-result').innerText = "Veuillez saisir des valeurs valides.";
+    }
+  });
+
+  // Télécharger le résultat du Critère de Taggart
+  document.getElementById('telecharger-taggart').addEventListener('click', function () {
+    var resultat = document.getElementById('taggart-result').innerText;
+    var blob = new Blob([resultat], { type: 'text/plain' });
+    var lien = document.createElement('a');
+    lien.href = URL.createObjectURL(blob);
+    lien.download = 'resultat-taggart.txt';
+    lien.click();
+  });
+</script> 
+<!-- end service section -->
+<!-- Footer Section -->
+<footer class="container-fluid footer_section">
+  <div class="container">
+    <div class="copyright text-center">
+      <p>© <span>Copyright</span> 
+        <strong class="px-1 sitename">MOHAMED OUJBIH 2024</strong> 
+        <span>All Rights Reserved</span>
+    
+    </div>
+  </div>
+</footer>
+
+  <!-- footer section -->
+
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
